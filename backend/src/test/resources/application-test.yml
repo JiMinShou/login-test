@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:authdemo;MODE=MySQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+
+app:
+  jwt:
+    secret: QXV0aERlbW9TZWNyZXRLZXlGb3JUZXN0TW9kZS0xMjM0NTY3ODkwYWJjZGVm
+    issuer: auth-app-test
+    access-token-minutes: 15
+    refresh-token-days: 7
+  security:
+    cors-allowed-origins:
+      - http://localhost:5173
+  seed:
+    admin:
+      enabled: false

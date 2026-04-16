@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/auth_demo?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:QXV0aERlbW9TZWNyZXRLZXlGb3JERVYtQ2hhbmdlVGhpc0luUHJvZHVjdGlvbi0xMjM0NTY3ODkw}
+    issuer: auth-app
+    access-token-minutes: 15
+    refresh-token-days: 7
+  security:
+    cors-allowed-origins:
+      - http://localhost:5173
+  seed:
+    admin:
+      enabled: true
+      username: admin
+      email: admin@example.com
+      password: Admin@12345

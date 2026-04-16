@@ -1,0 +1,11 @@
+# Backend env
+/target/
+/.mvn/
+
+# IDE
+/.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

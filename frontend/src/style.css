@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+:root {
+  --bg-main: linear-gradient(160deg, #eef4ff 0%, #dce8fa 45%, #d4e4e8 100%);
+  --card-bg: rgba(255, 255, 255, 0.82);
+  --card-border: rgba(255, 255, 255, 0.65);
+  --text-main: #1b2c4a;
+  --text-subtle: #4e617f;
+  --accent: #2f5ec7;
+  --accent-strong: #1f4698;
+  --danger: #b63346;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  color: var(--text-main);
+  background: var(--bg-main);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Sora", "IBM Plex Sans", sans-serif;
+  margin: 0;
+}
+
+.panel {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.4rem;
+  box-shadow: 0 18px 36px rgba(28, 47, 79, 0.12);
+}
+
+.page-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.page-desc {
+  color: var(--text-subtle);
+  margin-bottom: 1.2rem;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+.field {
+  margin-bottom: 0.95rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: #2a3d62;
+}
+
+.field input {
+  width: 100%;
+  border: 1px solid #b7c7e4;
+  background: #f8fbff;
+  border-radius: 12px;
+  padding: 0.7rem 0.8rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus {
+  border-color: #6e8ed1;
+  box-shadow: 0 0 0 3px rgba(47, 94, 199, 0.18);
+}
+
+.primary-btn {
+  width: 100%;
+  border: 0;
+  background: linear-gradient(135deg, var(--accent), #4f79d8);
+  color: white;
+  padding: 0.72rem 0.9rem;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(47, 94, 199, 0.28);
+}
+
+.primary-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.inline-link {
+  color: var(--accent-strong);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.error-text {
+  margin-top: 0.5rem;
+  color: var(--danger);
+  font-size: 0.92rem;
+}
